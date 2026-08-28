@@ -1,0 +1,52 @@
+{
+  "tag": "typhoon_v2_400",
+  "dataset_dir": "Results\\step07_09_mc_opf_typhoon_v2_400samples",
+  "split": {
+    "by": "sample (week)",
+    "seed": 42,
+    "train_samples": 120,
+    "val_samples": 20,
+    "test_samples": 260,
+    "fractions": [
+      0.3,
+      0.05,
+      0.65
+    ]
+  },
+  "test_rows": 43680,
+  "opf_savings_pct": 65.0,
+  "models": {
+    "FCNN": {
+      "metrics": {
+        "cost_ntd_hr": {
+          "r2": 0.9569,
+          "mae": 1703142.042,
+          "rmse": 4756424.626
+        },
+        "ens_mwh": {
+          "r2": 0.9376,
+          "mae": 24.573,
+          "rmse": 94.756
+        }
+      },
+      "train_time_s": 11.3,
+      "infer_ms_per_scenario": 0.0001
+    },
+    "GNN": {
+      "metrics": {
+        "cost_ntd_hr": {
+          "r2": 0.5952,
+          "mae": 5818555.975,
+          "rmse": 14583412.017
+        },
+        "ens_mwh": {
+          "r2": 0.4533,
+          "mae": 88.35,
+          "rmse": 280.532
+        }
+      },
+      "train_time_s": 772.3,
+      "infer_ms_per_scenario": 0.751
+    }
+  }
+}
